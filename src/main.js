@@ -1,5 +1,5 @@
 import "./css/index.css"
-import IMask from "imask"
+import IMask from "/imask"
 import "../../explorer-lab-01-main/index.html"
 
 
