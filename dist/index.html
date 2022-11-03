@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/cc-icon.d79fd1d4.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My pay app</title>
+    <link rel="stylesheet" type="text/css" href="data:text/css;base64,KiB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKfQoKOnJvb3QgewogIGZvbnQtc2l6ZTogNjIuNSU7CgogIGZvbnQtZmFtaWx5OiBJbnRlciwgc2Fucy1zZXJpZjsKICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjg3KTsKCiAgZm9udC1zeW50aGVzaXM6IG5vbmU7CiAgdGV4dC1yZW5kZXJpbmc6IG9wdGltaXplTGVnaWJpbGl0eTsKICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDsKICAtbW96LW9zeC1mb250LXNtb290aGluZzogZ3JheXNjYWxlOwogIC13ZWJraXQtdGV4dC1zaXplLWFkanVzdDogMTAwJTsKfQoKYm9keSB7CiAgZm9udC1zaXplOiAxLjZyZW07CiAgYmFja2dyb3VuZDogIzEyMTIxNDsKCiAgZGlzcGxheTogZmxleDsKICBwbGFjZS1pdGVtczogY2VudGVyOwoKICBtaW4taGVpZ2h0OiAxMDB2aDsKfQoKLmZsZXggewogIGRpc3BsYXk6IGZsZXg7Cn0KCiNhcHAgewogIGRpc3BsYXk6IGdyaWQ7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgZ2FwOiAzLjJyZW07CgogIHdpZHRoOiA5MCU7CiAgbWF4LXdpZHRoOiA0MnJlbTsKICBtYXJnaW46IDAgYXV0bzsKCiAgcGFkZGluZzogMi44cmVtIDZyZW0gNHJlbTsKICBiYWNrZ3JvdW5kOiAjMjAyMDI0OwogIGJvcmRlcjogMC4xcmVtIHNvbGlkICMzMjMyMzg7CiAgYm9yZGVyLXJhZGl1czogMC42cmVtOwp9CgojYXBwIGhlYWRlciB7CiAgZGlzcGxheTogZmxleDsKICBhbGlnbi1pdGVtczogY2VudGVyOwp9Cg==" media="screen" />
+    <link rel="stylesheet" type="text/css" href="data:text/css;base64,LyogQ0MgKi8KLmNjIHsKICBiYWNrZ3JvdW5kOiBuby1yZXBlYXQgY2VudGVyL2NvdmVyOwogIGJhY2tncm91bmQtaW1hZ2U6IHVybCgiL2NjLWJnLnN2ZyIpOwogIHdpZHRoOiAzNnJlbTsKICBoZWlnaHQ6IDIzcmVtOwogIHBhZGRpbmc6IDJyZW07CgogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47Cn0KCi5jYy1sb2dvIHsKICBkaXNwbGF5OiBmbGV4OwogIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsKICBhbGlnbi1pdGVtczogY2VudGVyOwp9CgouY2MtaW5mbyB7CiAgZGlzcGxheTogZ3JpZDsKICBnYXA6IDEuNHJlbTsKfQoKLmNjLW51bWJlciB7CiAgZm9udC1zaXplOiAyLjRyZW07CiAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgbGluZS1oZWlnaHQ6IDIuOXJlbTsKICBsZXR0ZXItc3BhY2luZzogMC4wNGVtOwoKICBjb2xvcjogI2U4ZThlODsKICB0ZXh0LXNoYWRvdzogMCAwLjEycmVtIDAuMzJyZW0gcmdiKDIzIDIzIDIzIC8gNDAlKTsKfQoKLmNjLWhvbGRlciwKLmNjLWV4cGlyYXRpb24sCi5jYy1zZWN1cml0eSB7CiAgZGlzcGxheTogZ3JpZDsKICBnYXA6IDAuNHJlbTsKfQoKLmNjIC5sYWJlbCB7CiAgZm9udC1zaXplOiAxcmVtOwogIGxpbmUtaGVpZ2h0OiAxLjJyZW07Cn0KCi5jYyAudmFsdWUgewogIGZvbnQtc2l6ZTogMS40cmVtOwogIGZvbnQtd2VpZ2h0OiBib2xkOwogIGNvbG9yOiAjZmZmZmZmOwogIHRleHQtc2hhZG93OiAwIDAuMjVyZW0gMC4yNXJlbSByZ2IoMjIgMjIgMjIgLyAxNiUpOwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7Cn0KCi5jYy1leHRyYSB7CiAgZGlzcGxheTogZmxleDsKICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKfQoKLmNjLAouY2MtbG9nbywKLmNjLW51bWJlciB7CiAgcG9zaXRpb246IHJlbGF0aXZlOwp9CgouY2MtYmcgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICBpbnNldDogMDsKICB6LWluZGV4OiAwOwp9Cg==" media="screen" />
+    <link rel="stylesheet" type="text/css" href="data:text/css;base64,LyogZm9ybSAqLwpmb3JtIHsKICBtYXgtd2lkdGg6IDM2cmVtOwogIGRpc3BsYXk6IGdyaWQ7CiAgZ2FwOiAxLjZyZW07Cn0KCmZvcm0gLmlucHV0LXdyYXBwZXIgewogIGRpc3BsYXk6IGdyaWQ7CiAgZ2FwOiAwLjZyZW07Cn0KCmZvcm0gbGFiZWwgewogIGZvbnQtd2VpZ2h0OiA2MDA7CiAgZm9udC1zaXplOiAxLjJyZW07CiAgbGluZS1oZWlnaHQ6IDEuNXJlbTsKICBsZXR0ZXItc3BhY2luZzogMC4wMXB4OwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgY29sb3I6ICNlMWUxZTY7Cn0KCmZvcm0gaW5wdXQgewogIGJhY2tncm91bmQ6ICMxMjEyMTQ7CiAgYm9yZGVyOiAxcHggc29saWQgIzMyMzIzODsKICBib3JkZXItcmFkaXVzOiA2cHg7CiAgaGVpZ2h0OiA0MXB4OwogIHBhZGRpbmctaW5saW5lOiAxLjJyZW07CgogIHdpZHRoOiAxMDAlOwoKICBjb2xvcjogd2hpdGU7CiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKfQoKZm9ybSAuZmxleCB7CiAgZ2FwOiAxLjRyZW07Cn0KCmZvcm0gLmZsZXggLmlucHV0LXdyYXBwZXIgewogIGZsZXg6IDE7Cn0KCmZvcm0gYnV0dG9uIHsKICBtYXJnaW4tdG9wOiAxLjZyZW07CgogIGRpc3BsYXk6IGZsZXg7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBwYWRkaW5nOiAxLjZyZW0gMDsKCiAgYmFja2dyb3VuZDogIzQyZDNmZjsKICBib3JkZXItcmFkaXVzOiAwLjZyZW07CgogIGN1cnNvcjogcG9pbnRlcjsKCiAgYm9yZGVyOiBub25lOwoKICBmb250LXdlaWdodDogNzAwOwogIGZvbnQtc2l6ZTogMS40cmVtOwogIGxpbmUtaGVpZ2h0OiAxLjdyZW07CiAgY29sb3I6ICMxMjEyMTI7CgogIHRyYW5zaXRpb246IGZpbHRlciAwLjNzOwp9Cgpmb3JtIGJ1dHRvbjpob3ZlciB7CiAgZmlsdGVyOiBicmlnaHRuZXNzKDEuMSk7Cn0K" media="screen" />
+    <link rel="stylesheet" type="text/css" href="data:text/css;base64,QGltcG9ydCAiYmFzZS5jc3MiOwpAaW1wb3J0ICJjcmVkaXQtY2FyZC5jc3MiOwpAaW1wb3J0ICJmb3JtLmNzcyI7CgpAbWVkaWEgKG1heC13aWR0aDogNDIwcHgpIHsKICA6cm9vdCB7CiAgICBmb250LXNpemU6IDUwJTsKICB9CgogIGJvZHkgewogICAgYmFja2dyb3VuZDogIzIwMjAyNDsKICB9CgogICNhcHAgewogICAgYmFja2dyb3VuZDogbm9uZTsKICAgIGJvcmRlcjogbm9uZTsKICB9CgogIC5jYy1iZyBzdmcgewogICAgd2lkdGg6IDEwMCU7CiAgICBoZWlnaHQ6IGF1dG87CiAgfQp9CgpAbWVkaWEgKG1pbi13aWR0aDogNzgwcHgpIHsKICAjYXBwIHsKICAgIGdyaWQtdGVtcGxhdGUtYXJlYXM6CiAgICAgICJBIEIiCiAgICAgICJDIEIiOwoKICAgIHdpZHRoOiBmaXQtY29udGVudDsKICAgIG1heC13aWR0aDogZml0LWNvbnRlbnQ7CiAgICBwYWRkaW5nLWlubGluZTogNC44cmVtOwoKICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMC44ZnIgMWZyOwogIH0KCiAgI2FwcCBoZWFkZXIgewogICAgZ3JpZC1hcmVhOiBBOwogIH0KCiAgI2FwcCBzZWN0aW9uLmNjIHsKICAgIGdyaWQtYXJlYTogQjsKICAgIGFsaWduLXNlbGY6IGNlbnRlcjsKICB9CgogICNhcHAgZm9ybSB7CiAgICBncmlkLWFyZWE6IEM7CiAgfQp9Cg==" media="screen" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index.2190604b.js"></script>
+    <link rel="stylesheet" href="/assets/index.a627c5ba.css">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h3>Cartão clonado? Insira as informações abaixo e verifique! </h3>
+      </header>
+
+      <section class="cc">
+        <div class="cc-bg">
+          <svg
+            width="360"
+            height="230"
+            viewBox="0 0 360 230"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              id="mask0_3_2547"
+              style="mask-type: alpha"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="360"
+              height="230"
+            >
+              <rect width="360" height="230" rx="15.4011" fill="#16084C" />
+            </mask>
+            <g mask="url(#mask0_3_2547)">
+              <g filter="url(#filter0_f_3_2547)">
+                <path
+                  d="M451.518 -135.506C473.881 -89.3531 414.166 -13.4917 318.142 33.9349C222.118 81.3615 126.147 82.3939 103.784 36.2409C81.4215 -9.91221 141.136 -85.7735 237.16 -133.2C333.184 -180.627 429.156 -181.659 451.518 -135.506Z"
+                  fill="black"
+                />
+              </g>
+              <g filter="url(#filter1_f_3_2547)">
+                <path
+                  d="M399.134 -169.756C421.497 -123.603 361.783 -47.742 265.758 -0.315356C169.734 47.1113 73.7629 48.1437 51.4003 1.99062C29.0377 -44.1624 88.7521 -120.024 184.776 -167.45C280.8 -214.877 376.772 -215.909 399.134 -169.756Z"
+                  fill="gray"
+                />
+              </g>
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_3_2547"
+                x="43.2629"
+                y="-225.286"
+                width="468.777"
+                height="351.306"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="27.9144"
+                  result="effect1_foregroundBlur_3_2547"
+                />
+              </filter>
+              <filter
+                id="filter1_f_3_2547"
+                x="-9.12087"
+                y="-259.536"
+                width="468.777"
+                height="351.306"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="27.9144"
+                  result="effect1_foregroundBlur_3_2547"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="cc-logo">
+          <span><img src="/assets/cc-icon.d79fd1d4.svg" alt="ícone padrão de cartão" /></span>
+          <span
+            ><img
+              src="/assets/cc-visa.cf832621.svg"
+              alt="ícone do cartão de crédito selecionado"
+          /></span>
+        </div>
+
+        <div class="cc-info">
+          <div class="cc-number">1234 5678 9012 3456</div>
+
+          <div class="cc-holder">
+            <div class="label">Nome do titular</div>
+            <div class="value">FULANO DA SILVA</div>
+          </div>
+
+          <div class="cc-extra">
+            <div class="cc-expiration">
+              <div class="label">Expiração</div>
+              <div class="value">02/32</div>
+            </div>
+            <div class="cc-security">
+              <div class="label">CVC</div>
+              <div class="value">123</div>
+            </div>
+            <img src="/assets/cc-chip.d9a84831.svg" alt="ícone de chip de cartão de crédito" />
+          </div>
+        </div>
+      </section>
+
+      <form action="">
+        <div class="input-wrapper">
+          <label for="card-number">Número do cartão</label>
+          <input id="card-number" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="card-holder">Nome do titular</label>
+          <input id="card-holder" />
+        </div>
+
+        <div class="flex">
+          <div class="input-wrapper">
+            <label for="expiration-date">Expiração</label>
+            <input id="expiration-date" />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="security-code">CVC</label>
+            <input id="security-code" />
+          </div>
+        </div>
+
+        <button id="add-card">ADICIONAR CARTÃO</button>
+      </form>
+    </div>
+
+    
+  </body>
+</html>
