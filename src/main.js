@@ -1,5 +1,5 @@
 import "./css/index.css"
-import IMask from "/imask"
+import IMask from "imask"
 import "../../explorer-lab-01-main/index.html"
 
 
@@ -79,7 +79,7 @@ const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
 const addButton = document.querySelector("#add-card")
 
 addButton.addEventListener("click", () => {
-    alert("Foi clonado! kkkkk 🤣🤣🤣🤣🤣🤣" )
+    alert("Thank you for the purchase!" )
 })
 
 document.querySelector("form").addEventListener("submit", () => {   
